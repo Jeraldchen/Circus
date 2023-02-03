@@ -1,9 +1,17 @@
+package circus;
+
+import circus.animals.Animal;
+import circus.animals.Duck;
+import circus.animals.Parrot;
+import circus.stuff.Cannon;
+import circus.stuff.Ladder;
+
 public class Circus {
     private static Animal[] animals = {
             new Duck(),
             new Parrot()
     };
-    private static Equipment[] equipments = {
+    private static Asset[] equipments = {
             new Ladder(50),
             new Cannon(5),
             new Cannon(100)
@@ -16,18 +24,18 @@ public class Circus {
         }
     }
 
-    private static int calculateValue(Equipment[] equipments) {
+    private static int calculateValue(Asset[] assets) {
         int total = 0;
-        for (Equipment e : equipments) {
+        for (Asset e : assets) {
+
             if (e.getValue() <= 5) {
+                //guard clause
                 System.out.println("Ignoring low value item: " + e.getValue());
             } else {
+                //happy path
                 total += e.getValue();
                 System.out.println("Adding item value: " + e.getValue());
-                // some
-                // more
-                // code
-                // here ...
+
             }
         }
         return total;
