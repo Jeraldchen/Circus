@@ -2,8 +2,9 @@
 
 The Circus project
 
-Update documentation
-
+Update documentation.
+Learn about branching.
+Learn Abstract class & interface.
 
 ### Credits
 
